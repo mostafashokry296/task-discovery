@@ -1,0 +1,118 @@
+// Brand Colors //
+$primary-color: #4F0C8C;
+$indigo	: #3B0F66;
+$rebeccapurple: #4F008C;
+$accent-color: #FFDD40;
+$forest-green:#00C48C;
+$secondary-grey: #8E9AA0;
+$primary-white: #ffffff;
+$secondary-grey2: #FFEAEE;
+$light-grey: #fafafa;
+$dark-black: #1D252D;
+$nero: #1D252D;
+$rosy-pink: #FF375E;
+$orangered: #FF6A39;
+$cyan:  #1BCED8;
+$gray:#F3F3F3;
+$gray-scale:#eee;
+
+//Media query variables
+$min: 'min';
+$max: 'max';
+// Media Query Breakpoints
+// Small tablets and large smartphones (landscape view)
+$screen-sm-min: 576px;
+
+// Small tablets (portrait view)
+$screen-md-min: 768px;
+
+// Tablets and small desktops
+$screen-lg-min: 992px;
+
+// Large tablets and desktops
+$screen-xl-min: 1200px;
+
+// HD screen
+$screen-xxl-min: 1600px;
+
+// Typography Sizes
+$font-xxxs: 0.625rem; //10px;
+$font-xxs: 0.6875rem; //11px;
+$font-xs: 0.75rem; // 12px;
+$font-sm: 0.875rem; // 14px;
+$base-font: 1rem; // 16px;
+$font-md: 1.125rem; // 18px;
+$font-lg: 1.25rem; // 20px;
+$font-xl: 1.5rem; // 24px;
+$font-xxl: 1.875rem; // 30px;
+$font-xxmdl: 2.25rem; // 36px;
+$font-xxxmdl: 2.5rem; // 40px
+$font-xxxl: 3rem; // 48px
+
+$discovery: (
+  'h1': 1.125rem,
+  //18px,
+  'h2': 1.875rem,
+  //30px,
+  'h4': 2rem,
+  //40px
+  'h3': 3.4375rem,
+  //55px,
+  'ps': 1rem,
+  // 16px,
+  'pl': 1.25rem,
+  //20px,
+  'xl': 1.5rem,
+  //24px;
+  'link': 0.875rem,
+  //14px,
+  'link-s': 0.75rem,
+  //12px,
+  'xxxl': 4rem,
+  'triple-xLarge': 4rem,
+  // 64px
+  'xxxxl': 4.5rem //72px
+);
+$discovery-mob: (
+  'h1': 1rem,
+  //16px,
+  'h2': 1.5rem,
+  //24px,
+  'h3': 2.125rem,
+  //34px,
+  'xs': 0.875rem,
+  'ps': 1rem,
+  // 16px,
+  'pl': 1.25rem,
+  // 20px,
+  'xl': 1.125rem,
+  //18px;
+  'xxl': 1.75rem,
+  //28px;
+  'link': 0.875rem,
+  //14px,
+  'link-s': 0.75rem,
+  //12px,
+  'pm': 1.125rem,
+  //18px
+  'xxxl': 1.5rem,
+  'triple-xLarge': 1.5rem,
+  // 64px
+  'xxxxl': 1.875rem //72px
+);
+$font-weights: (
+  'light': 300,
+  'normal': 400,
+  'medium': 500,
+  'semi-bold': 600,
+  'bold': 700
+);
+$text-align: (left, right, center);
+$text-transforms: (uppercase, lowercase, capitalize, none);
+$cursors: (none, pointer, default, text);
+$text-decorations: (overline, line-through, underline);
+
+$text-color: (
+  'rosy-pink': $rosy-pink,
+  'primary-color': $primary-color
+);

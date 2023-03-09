@@ -1,0 +1,92 @@
+
+@import "../../assets/scss/base/variables";
+@import "../../assets/scss/base/mixins";
+.header-card{
+  background-color:  $primary-white;
+  border-radius: 0.25rem;
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .header-card__option {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    .badge__bar{
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background-color:$orangered;
+    }
+    .badge__completed{
+      background-color:$forest-green;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+    .badge__wating{
+      background-color: $primary-color;
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+    }
+  }
+}
+
+.main-card {
+  background-color: $primary-white;
+  margin-top: 1rem;
+  padding: 1rem;
+  .card-img {
+    margin-bottom: 1rem;
+    max-width: 100%;
+  }
+  .main-card__subtitle {
+    margin-top: 1rem;
+    color: $secondary-grey;
+    font-size: 14px;
+  }
+}
+.photo_stc  {
+  position: relative;
+  width: 92px;
+  height: 32px;
+  img {
+    height: 32px;
+    position: absolute;
+  }
+  .image_one{
+    @include rtl(left,16px,auto);
+    @include rtl(right,auto,16px);
+
+  }
+  .image_two{
+    @include rtl(left,32px,auto);
+    @include rtl(right,auto,32px);
+
+  }
+  .image_three{
+    @include rtl(left,46px,auto);
+    @include rtl(right,auto,46px);
+  }
+}
+.badge{
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  background: $gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 32px;
+  width: 32px;
+  cursor: pointer;
+  @include rtl(left,60px,auto);
+  @include rtl(right,auto,60px);
+}
+.gap-60 {
+  gap: 80px;
+}
+

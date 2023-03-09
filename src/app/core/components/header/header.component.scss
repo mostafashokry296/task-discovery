@@ -1,0 +1,158 @@
+
+@import "../../../../assets/scss/base/variables";
+@import "../../../../assets/scss/base/mixins";
+.header {
+  background-color: $primary-white;
+  border-radius: 0.25rem;
+  padding: 1rem;
+}
+.header__box {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  margin-bottom: $font-xs;
+  .header__title {
+    font-size: $font-xxl;
+  }
+  .header__icon {
+    button {
+      border: none;
+      background: $gray;
+      border-radius: 50%;
+      padding: 3px;
+      cursor: pointer;
+      width: 30px;
+      height: 30px ;
+  }
+  }
+}
+.header__sub-title {
+  color: $secondary-grey;
+  font-size: $font-sm;
+}
+// Start Button when click
+.item-center {
+  gap: 20px;
+  .btn-container {
+    display: flex;
+    gap: 22px;
+    .btn-default {
+      display: flex;
+      align-items: center;
+      transition: all 0.3s linear;
+      padding: 15px 30px;
+      border-radius: 4px;
+      border-radius: 0.25rem;
+      position: relative;
+      &::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        height: 50%;
+        width: 2px;
+        background-color: $gray-scale;
+        transform: translate(-50%,-50%);
+       @include rtl(right,-20px,auto);
+        @include rtl(left,auto,-20px);
+
+      }
+      &:last-of-type {
+        &::after {
+          background-color: transparent;
+        }
+      }
+    }
+
+  }
+
+}
+
+
+.btn-prim {
+  background: $gray-scale;
+  text-align: center;
+  position: relative;
+  &::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: $primary-color;
+    width: 4px;
+    height: 100%;
+    border-radius: 4px;
+  }
+
+}
+// End Button when click
+
+
+.photo_stc  {
+  position: relative;
+  img {
+    height: 40px;
+  }
+  .image_one{
+    position: absolute;
+    @include rtl(left,20px,auto);
+    @include rtl(right,auto,20px);
+
+  }
+  .image_two{
+    bottom: 5px;
+    @include rtl(left,62px,auto);
+    @include rtl(right,auto,62px);
+
+  }
+  .image_three{
+    position: absolute;
+    @include rtl(left,40px,auto);
+    @include rtl(right,auto,40px);
+  }
+}
+.badge{
+  position: absolute;
+  top: 0;
+  bottom: 0px;
+  background: $gray;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 14px;
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+  @include rtl(left,60px,auto);
+  @include rtl(right,auto,60px);
+}
+.gap-60 {
+  gap: 80px;
+}
+
+//--input & mat-icon--//
+.input{
+  position: relative;
+  display: flex;
+  color: $primary-white;
+  align-items: center;
+  cursor: pointer;
+
+}
+.input__stc{
+  padding: 25px;
+  font-size: 12px;
+}
+.mat_icon_sct{
+  position: absolute;
+  color: $primary-white;
+  right: -2px;
+  bottom: 9px;
+  font-size: 18px;
+
+}
+.icon-plus
+{
+  cursor: pointer;
+
+}

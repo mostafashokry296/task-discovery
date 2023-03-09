@@ -1,0 +1,53 @@
+<div class="header">
+  <div class="row mb-5">
+    <div class="col-12">
+      <div class="header__box">
+        <div class="header__title">HUB Road Map</div>
+        <div class="header__icon ">
+          <button mat-icon-button  aria-label="Example icon-button with a menu">
+            <mat-icon>more_vert</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="col-12">
+      <div class="header__sub-title">Manage all the tasks in your platform </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-12">
+      <div class="justify-content">
+        <div class="item-center">
+          <div class="btn-container ">
+            <a class="btn-default btn-prim cursor-pointer"
+            [ngClass]="{'btn-prim': step === 'step1'}" (click)="navigate('kanban','step1')">Kanban</a>
+          <a class="btn-default cursor-pointer "
+            [ngClass]="{'btn-prim': step === 'step2'}" (click)="navigate('main-table','step2')">Main Table</a>
+          <a class="btn-default cursor-pointer "
+            [ngClass]="{'btn-prim': step === 'step3'}" (click)="navigate('dashboard','step3')">Dashboard</a>
+          </div>
+          <div class="icon-plus">
+            <img src="assets/images/icons/stc-plus.svg" alt="stc-plus">
+          </div>
+        </div>
+        <div class="item-center gap-60">
+          <div class="photo_stc">
+            <img class="image_one" src="assets/images/icons/icon-avatar.svg" alt="icon-avatar" />
+            <img class="image_two" src="assets/images/icons/icon-avatar.svg" alt="icon-avatar" />
+            <img class="image_three" src="assets/images/icons/icon-avatar.svg" alt="icon-avatar" />
+            <span class="badge">+4</span>
+          </div>
+          <div class="input">
+            <button mat-raised-button color="primary" class="font-STC primary-bg-color input__stc">Add Member</button>
+            <mat-icon class="mat_icon_sct">add</mat-icon>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+
+

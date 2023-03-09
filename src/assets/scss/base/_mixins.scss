@@ -1,0 +1,146 @@
+/*
+  Media Query Mixins
+*/
+
+// Small devices (Mobile Devices)
+@mixin sm($minmax) {
+  @if $minmax == $min {
+    @media (min-width: #{$screen-sm-min}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screen-sm-min -1px}) {
+      @content;
+    }
+  }
+}
+
+// Medium devices (Tablets Portrait View)
+@mixin md($minmax) {
+  @if $minmax == $min {
+    @media (min-width: #{$screen-md-min}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screen-md-min - 1px}) {
+      @content;
+    }
+  }
+}
+
+// Large devices (Tablet Landscape and Medium monitors)
+@mixin lg($minmax) {
+  @if $minmax == $min {
+    @media (min-width: #{$screen-lg-min}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screen-lg-min - 1px}) {
+      @content;
+    }
+  }
+}
+
+// Extra large devices (Desktops)
+@mixin xl($minmax) {
+  @if $minmax == $min {
+    @media (min-width: #{$screen-xl-min}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screen-xl-min - 1px}) {
+      @content;
+    }
+  }
+}
+
+// HD Screen devices (Desktops)
+@mixin xxl($minmax) {
+  @if $minmax == $min {
+    @media (min-width: #{$screen-xxl-min}) {
+      @content;
+    }
+  } @else {
+    @media (max-width: #{$screen-xxl-min - 1px}) {
+      @content;
+    }
+  }
+}
+
+// HD Screen devices (for designs Targeted tablet only)
+// when you targeted the sizes between lg & md
+@mixin ipadOnly() {
+  @media only screen and (min-device-width: $screen-md-min) and (max-device-width: 1023px) {
+    @content;
+  }
+}
+
+@each $val in $text-transforms {
+  .tt-#{$val} {
+    //tt-uppercase
+    text-transform: $val !important;
+  }
+}
+
+@each $val in $text-decorations {
+  .td-#{$val} {
+    //td-underline
+    text-decoration: $val !important;
+  }
+}
+@include lg($max) {
+  @each $val in $text-transforms {
+    .tt-mob-#{$val} {
+      //tt-uppercase
+      text-transform: $val !important;
+    }
+  }
+}
+
+//Text color mixin
+@each $type, $val in $text-color {
+  .color-#{$type} {
+    //ta-center
+    color: $val !important;
+  }
+}
+/*generic modifications for rtl start*/
+/* rtl method to add css property*/
+@mixin rtl-prop($ltr-property, $rtl-property, $value) {
+  [dir='ltr'] & {
+    #{$ltr-property}: $value;
+  }
+  [dir='rtl'] & {
+    #{$rtl-property}: $value;
+  }
+}
+
+@mixin rtl($property, $ltr-value, $rtl-value) {
+  :host-context([dir="ltr"]) & {
+    #{$property}: $ltr-value;
+  }
+
+  :host-context([dir="rtl"]) & {
+    #{$property}: $rtl-value;
+  }
+}
+///////////////////////////////////
+@each $val in $cursors {
+  .cursor-#{$val} {
+    //cursor-pointer
+    cursor: $val !important;
+  }
+}
+@each $type, $val in $font-weights {
+  .fw-#{$type} {
+    //fw-bold
+    font-weight: $val !important;
+  }
+}
+
+@each $val in $text-align {
+  .ta-#{$val} {
+    //ta-center
+    text-align: $val !important;
+  }
+}

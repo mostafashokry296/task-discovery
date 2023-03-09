@@ -1,0 +1,28 @@
+@import'../assets/scss/base/variables';
+
+app-side-bar {
+  width: 100%;
+}
+.container-side {
+  display: flex;
+  gap: 16px;
+  padding: 0;
+  .sidebar{
+    background: $primary-color;
+    width: 65px;
+    height: calc(100% + 32px);
+    left: 0;
+    z-index: 1;
+    position: relative;
+    top: -32px;
+    ul li {
+      margin: 60px 20px;
+    }
+    ul li img:hover {
+      color: $gray;
+      margin-left: 5px;
+      transition: 0.2s;
+      cursor: pointer;
+    }
+  }
+}

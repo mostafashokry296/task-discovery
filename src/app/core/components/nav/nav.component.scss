@@ -1,0 +1,23 @@
+@import "../../../../assets/scss/base/variables";
+@import "../../../../assets/scss/base/mixins";
+
+.bg-nav {
+  background-color: $primary-white;
+  border-bottom: 1px solid $gray-scale;
+  margin-bottom: 32px;
+}
+.img-box {
+  max-width: 64px;
+}
+.menu {
+  display: flex;
+  justify-content: flex-end;
+  .menu__item {
+    padding: 1rem;
+    @include rtl(border-right, 1px solid $gray-scale, none);
+    @include rtl(border-left, none, 1px solid $gray-scale);
+    &:last-child {
+      border-right: none;
+    }
+  }
+}
